@@ -1,7 +1,14 @@
 import { initializeApp} from "firebase/app";
 import {getAuth, GoogleAuthProvider} from 'firebase/auth';
 
-const firebaseConfig = JSON.parse(import.meta.env.VITE_KEY);
+const firebaseConfig = {
+  "apiKey": import.meta.env.VITE_APIKEY, 
+  "authDomain": import.meta.env.VITE_AUTHDOMAIN, 
+  "projectId": import.meta.env.VITE_PROJECTID, 
+  "storageBucket": import.meta.env.VITE_STORAGEBUCKET, 
+  "messagingSenderId": import.meta.env.VITE_MESSAGEID, 
+  "appId": import.meta.env.VITE_APIID
+}
 
 const app = initializeApp(firebaseConfig);  // connects your React app to your Firebase project.
 
