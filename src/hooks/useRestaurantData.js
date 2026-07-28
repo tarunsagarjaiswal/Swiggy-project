@@ -6,7 +6,7 @@ function useRestaurantData() {
       const [onYourMind , setOnYourMind] = useState([]);
 
       async function fetchData() {
-                  const data = await fetch(`${import.meta.env.VITE_BASE_URL}/dapi/restaurants/list/v5?lat=22.71700&lng=75.83370&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`)
+                  const data = await fetch(`/dapi/restaurants/list/v5?lat=22.71700&lng=75.83370&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`)
           
                   const result = await data.json();
                   // console.log(result?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);

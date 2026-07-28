@@ -27,7 +27,7 @@ function Search() {
 
     
     async function fetch_Restaurant_Dishes() {
-        let response = await fetch(`${import.meta.env.VITE_RESTAURANT_URL}/dapi/restaurants/search/v3?lat=22.71700&lng=75.83370&str=${searchQuery}&trackingId=undefined&submitAction=ENTER&queryUniqueId=1a6ff50f-7611-0e2f-caa5-161617fc4264&selectedPLTab=RESTAURANT`);
+        let response = await fetch(`/dapi/restaurants/search/v3?lat=22.71700&lng=75.83370&str=${searchQuery}&trackingId=undefined&submitAction=ENTER&queryUniqueId=1a6ff50f-7611-0e2f-caa5-161617fc4264&selectedPLTab=RESTAURANT`);
 
         let data = await response.json();
         // setDishes(data?.data?.cards[0]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards?.filter(it => it?.card?.card?.info) || []);
