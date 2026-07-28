@@ -21,10 +21,8 @@ function RestaurantMenu() {
         
         let actualMenu = (MOCK_MENU_DATA?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards)?.filter(data => (data?.card?.card?.categories || data?.card?.card?.itemCards))
 
-        setMenuData(actualMenu);
+        setMenuData(actualMenu || []);
         // console.log(actualMenu);
-        
-
     }
 
     useEffect(() => {
