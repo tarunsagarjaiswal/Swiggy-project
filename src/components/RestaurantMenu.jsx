@@ -19,7 +19,7 @@ function RestaurantMenu() {
         
         setDiscountData(MOCK_MENU_DATA?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle.offers);
         
-        let actualMenu = (MOCK_MENU_DATA?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards).filter(data => (data?.card?.card?.categories || data?.card?.card?.itemCards))
+        let actualMenu = (MOCK_MENU_DATA?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards)?.filter(data => (data?.card?.card?.categories || data?.card?.card?.itemCards))
 
         setMenuData(actualMenu);
         // console.log(actualMenu);
